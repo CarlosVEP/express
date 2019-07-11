@@ -1,0 +1,24 @@
+extends layout
+block content
+	-
+		let nombre=["juan","alberto","maria","simon"]
+		let edad=[23,35,21,26]
+		let celular=[1234,4312,3456,6534]
+		let signo=["aries","tauro","geminis","cancer"]
+	table.table.table-dark.table-striped
+		thead
+			tr
+				th nombre
+				th edad
+				th celular
+				th signo
+		tbody
+			each val,index in nombre
+				tr
+					td #{val}
+					td=edad[index]
+					td
+						=celular[index]
+					td
+						| #{signo[index]}
+		tfooter
