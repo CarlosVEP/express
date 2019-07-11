@@ -1,0 +1,26 @@
+extends layout
+block content
+  mixin article(title)
+    .article
+      .article-wrapper
+        h1= title
+        if block
+          block
+        else
+          p no content provided
+  +article('hola mundo')
+  +article('hola mundo')
+    p this is my
+    p amzaing
+  +article('hola mundo')
+    p jejej
+  h1.text-danger asdf
+  .row
+    .col-3.text-center
+      p Hola
+    .col-3.text-center
+      p jejej
+    .col-3.text-center
+      p lolololo
+    .col-3.text-center
+      p jojojojo

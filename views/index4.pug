@@ -1,0 +1,10 @@
+extends layout 
+block content
+  mixin pet(name)
+    li.pet= name
+  ul
+    +pet('cat')
+    +pet('dog')
+    +pet('pig')
+block content2
+  h2 pie de pagina

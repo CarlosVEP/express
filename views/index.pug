@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  //- comentario
+  p Welcome to #{title} 
+    b jojo 
+    | lalala
+  h1#principal hola mundo
+  h2.clase jeje
+  a(href="/some/"+title) click aqui
+  //- a(style="color:red") asdf
+  br
+  a(style={color: 'red', background: 'green'}) asdf
+  style.
+    .clase{
+      color: red;
+      background: blue
+    }
+  script.
+    console.log("hola que tal");

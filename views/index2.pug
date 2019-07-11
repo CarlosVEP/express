@@ -1,0 +1,14 @@
+extends layout
+block content
+  - 
+    var user = { description: 'foo bar ba' }
+    var autorised = false
+  #user
+    //- if user.description
+    if (user && user.description)
+      h2.green Description
+    else 
+      if authorised
+        h2.blue Description
+      else
+        h2.red Description

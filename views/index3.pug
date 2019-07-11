@@ -1,0 +1,14 @@
+extends layout
+block content
+  -
+    let arreglo=[5,4,3,2,1]
+  ul
+    each val, index in {1:'one',2:'two',3:'three'}
+      li=index + ': ' + val
+    ul
+      each val, index in arreglo
+        li #{index+":"+val}
+    ul
+      each val, index in arreglo
+        each val1, index1 in arreglo
+          li #{index} : #{val1}
