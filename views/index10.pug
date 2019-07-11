@@ -1,0 +1,13 @@
+extends layout
+block content
+  script.
+    function f1(valor){
+      console.log(valor)
+    }
+  //- - let nombres=["pancho","ferdinand","pedro","lucho"]
+  each val,index in nombres
+    button.btn.btn-secondary(type='button',name=val, id="boton"+val) #{val}
+    script.
+      document.getElementById("boton!{val}").addEventListener("click",function(){
+        f1(this.name)
+      })

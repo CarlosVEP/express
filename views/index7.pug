@@ -5,8 +5,8 @@ block content
 		let edad=[23,35,21,26]
 		let celular=[1234,4312,3456,6534]
 		let signo=["aries","tauro","geminis","cancer"]
-	table.table.table-dark.table-striped
-		thead
+	table.table.table-dark.table-striped.table-bordered.table-sm
+		thead.thead-light
 			tr
 				th nombre
 				th edad
@@ -14,7 +14,7 @@ block content
 				th signo
 		tbody
 			each val,index in nombre
-				tr
+				tr.table-success
 					td #{val}
 					td=edad[index]
 					td
@@ -22,3 +22,30 @@ block content
 					td
 						| #{signo[index]}
 		tfooter
+
+		table.table.table-hover
+			thead.thead-light
+				tr
+					th nombre
+					th edad
+					th celular
+					th signo
+			tbody
+				each val,index in nombre
+					if index==0
+						tr.table-success
+							td #{val}
+							td=edad[index]
+							td
+								=celular[index]
+							td
+								| #{signo[index]}
+					else
+						tr.table-warning
+							td #{val}
+							td=edad[index]
+							td
+								=celular[index]
+							td
+								| #{signo[index]}
+			tfooter

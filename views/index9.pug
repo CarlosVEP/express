@@ -1,0 +1,13 @@
+extends layout
+block content
+	-
+		let clase=["uno","dos"]
+	button.btn.btn-primary(type='button', class='clase') Primary
+	button.btn.btn-secondary(type='button', class='clase') secondary
+	button.btn.btn-warning(type='button', class='clase') warning
+	button.btn.btn-success(type='button', class='clase') success
+	script.
+		console.log("holas")
+		function saludo(){
+			alert("hola")
+		}
