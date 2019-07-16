@@ -1,0 +1,61 @@
+extends layout
+block content
+  nav#sectionsNav.navbar.navbar-transparent.navbar-color-on-scroll.fixed-top.navbar-expand-lg(color-on-scroll='100')
+    .container
+      .navbar-translate
+        a.navbar-brand(href='https://demos.creative-tim.com/material-kit/index.html')
+          | Material Kit
+        button.navbar-toggler(type='button', data-toggle='collapse', aria-expanded='false', aria-label='Toggle navigation')
+          span.sr-only Toggle navigation
+          span.navbar-toggler-icon
+          span.navbar-toggler-icon
+          span.navbar-toggler-icon
+      .collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.dropdown.nav-item
+            a.dropdown-toggle.nav-link(href='#', data-toggle='dropdown')
+              i.material-icons apps
+              |  Components
+            .dropdown-menu.dropdown-with-icons
+              a.dropdown-item(href='./index.html')
+                i.material-icons layers
+                |  All Components
+              a.dropdown-item(href='https://demos.creative-tim.com/material-kit/docs/2.1/getting-started/introduction.html')
+                i.material-icons content_paste
+                |  Documentation
+          li.nav-item
+            a.nav-link(href='javascript:void(0)', onclick='scrollToDownload()')
+              i.material-icons cloud_download
+              |  Download
+          li.nav-item
+            a.nav-link(rel='tooltip', title='', data-placement='bottom', href='https://twitter.com/CreativeTim', target='_blank', data-original-title='Follow us on Twitter')
+              i.fa.fa-twitter
+          li.nav-item
+            a.nav-link(rel='tooltip', title='', data-placement='bottom', href='https://www.facebook.com/CreativeTim', target='_blank', data-original-title='Like us on Facebook')
+              i.fa.fa-facebook-square
+          li.nav-item
+            a.nav-link(rel='tooltip', title='', data-placement='bottom', href='https://www.instagram.com/CreativeTimOfficial', target='_blank', data-original-title='Follow us on Instagram')
+              i.fa.fa-instagram
+  .page-header.header-filter.clear-filter.purple-filter(data-parallax='true', style="background-image: url('./assets/img/bg2.jpg');")
+    .container
+      .row
+        .col-md-8.ml-auto.mr-auto
+          .brand
+            h1 Material Kit.
+            h3 A Badass Bootstrap 4 UI Kit based on Material Design.
+  .main.main-raised
+    .section.section-basic
+      .container
+        .title
+          h2 Lista
+        .row
+          .col-3
+            b Título
+            input.form-control(placeholder="titulo")
+          .col-3
+            b Descripción
+            input.form-control(placeholder="descripción")
+          .col-3
+            input.btn.btn-primary(value="editar")
+          .col-3
+            input.btn.btn-danger(value="eliminar")

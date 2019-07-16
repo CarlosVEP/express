@@ -3,9 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var carsRouter = require('./routes/carRoutes');
+var tareasRouter = require('./routes/tareasRoutes');
+//mongodb+svg//mongodb+srv:://CarlosV:<password>@cluster0-dx9pa.mongodb.net/test?retryWrites=true&w=majority
+mongoose.connect('mongodb://localhost:27017/prueba2',{useNewUrlParser: true});
 
 var app = express();
 
@@ -25,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'node_modules/bootstrap/dist')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/cars', carsRouter);
+app.use('/tareas', tareasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

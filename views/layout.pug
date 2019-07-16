@@ -4,13 +4,22 @@ html
     title= title
     //- link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/jquery.min.js")
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/material-kit.min.css?v=2.0.5')
+    link(rel='stylesheet', href='/stylesheets/demo/demo.css')
     //- script(src="/popper.min.js") //sale error Unexpected token export
     //- script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
-    script(src="/umd/popper.min.js")
-    script(src="/js/bootstrap.min.js")
   body
     block content
+    script(src="/jquery.min.js")
+    script(src="/umd/popper.min.js")
+    script(src="/js/bootstrap.min.js")
+    script(src="./assets/js/core/bootstrap-material-design.min.js")
+    script(src="./assets/js/plugins/moment.min.js")
+    script(src="./assets/js/plugins/nouislider.min.js")
+    script(src="https://buttons.github.io/buttons.js")
+    script(src="./assets/js/material-kit.min.js?v=2.0.5")
   footer
     block content2
